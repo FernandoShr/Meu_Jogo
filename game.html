@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>O Jogo</title>
+    <link href="estilo.css" rel="stylesheet">
+    <style>
+        body{
+            background-image: url('wallpaper3.png');
+            background-size: cover;
+        }
+
+        #myCanvas{
+            background-image: url(teste.gif);
+            background-size: cover;
+        }
+
+        .c1{
+            display: flex;
+            justify-content: center;
+        }
+
+        #bot{
+            display: flex;
+            justify-content: center;
+        }
+
+        #botao{
+            background-color: rgb(236, 163, 26);
+            font-size: 40pt;
+        }
+
+        #botao:hover{
+            background-color: rgb(194, 79, 3);
+        }
+        #texto1{
+            color: white;
+            font-size: 20pt;
+            background-color: rgb(28, 28, 28);
+        }
+        #texto2{
+            color: white;
+            font-size: 20pt;
+        }
+        #vida{
+            background-color: rgb(255, 202, 104);
+            font-size: 20pt;
+            padding: 10px;
+            display: flex;
+        }
+        #score{
+            background-color: rgb(255, 202, 104);
+            font-size: 20pt;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="barra">
+        <li class="linha"><a href="mainPage.html">Home</a></li>
+        <li class="linha"><a href="page2.html">Desenvolvedor</a></li>
+        <li class="linha"><a href="gamePage.html">O Jogo</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <div id="texto1">Como jogar:<br><br>
+    *Após iniciar o jogo com o botão "START" começará a aparecer Dragões em sua tela em direção ao portal no centro do campo.<br>
+    *Seu objetivo é acertar as criaturas com sua mira, a qual é controlada pelo mouse, e impedir que as criaturas cheguem ao portal.<br>
+    *Para atirar, pressione o botão esquerdo do mouse.<br>
+    *Você marca pontos ao acertar os Dragões (marcado pelo "score").<br>
+    *Você possue um total de 9 vidas iniciais, quando as criaturas entram no portal perde uma vida.<br>
+    *No decorrer do jogo, surgirá itens que aumentam os seus pontos de vida.<br>
+    *Além disso, ao acertar uma criatura, ela aumenta a sua velocidade.<br><br>
+    </div>
+    <br><br>
+    <div class = "c1">
+        <div id="texto2">
+            Vidas:<input type="button" id="vida"> <br><br> 
+            Score:<input type="button" id="score">  
+        </div>
+    <canvas id="myCanvas" width="700px" height="500px"></canvas>
+    </div>
+
+    <div id="bot">
+    <input type="button" value="START" onclick="reset();introPiscarBranco();introPiscarBackground();introPiscarBranco2();introPiscarBackground2();introPiscarBranco3();introPiscarBackground3();intro() ;musicIntro(); musicLoop(); atualizar(); asaMov()" id="botao">
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
