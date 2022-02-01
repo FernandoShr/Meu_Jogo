@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link href="estilo.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <style>
+        body{
+            background-image: url('home.jpg');
+            background-size: cover;
+        }
+        #imagem{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+        }
+        #img {
+            border: double white 10px;
+        }
+        #BemVindo{
+            position: relative;
+            top: -270px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+        }
+        #titulo{
+            color: orange;
+            font-size: 90pt;
+            margin: 10px;
+            padding: 10px;
+            font-family: 'Audiowide';
+            border: inset rgb(131, 131, 131) 20px
+        }
+        #barra{
+            z-index: 5;
+        }
+        #texto{
+            color: white;
+            position: relative;
+            font-size: 20pt;
+            text-align: center;
+        }
+        #wall{
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="barra">
+        <li class="linha"><a href="mainPage.html">Home</a></li>
+        <li class="linha"><a href="page2.html">Desenvolvedor</a></li>
+        <li class="linha"><a href="gamePage.html">O Jogo</a></li>
+    </ul> 
+    <div id="imagem" >
+    <img id ="img"src="galaxia_espiral.gif" alt="galaxia" width="1000px" height="500px" >
+    </div> 
+
+    <div id="BemVindo">
+        <b id="titulo">Bem Vindo!</b>
+    </div>
+
+
+        <div id="texto"><b>Bem vindo ao site do jogo "The Portal of Dragon's cave".</b><br><br>
+            <div id="texto"> Primeiramente, essas foram as variáveis que criei para construir o jogo:<br>
+                <img src="codigo.png"><br>
+                Dentre elas, há variáveis para a ativação de músicas, troca de imagens dos personagens, para o controle do mouse como uma mira, variáveis que contam sua quantidade de vida, score. A variável asa usei como um parâmetro para conseguir gerar uma movimentação para os Dragões. E "click" foi criada para no momento do click do mouse identificar se o alvo está no campo de mira ou não.<br>
+                Depois, criei um total de 16 objetos, sendo 8 inimigos, 1 a mira, 4 sendo as vidas extras que caem durante o jogo, 2 sendo um bloco preto apenas para fazer a intro, e o último o portal no centro o qual chamei de "monólito".<br>
+                Com a função desenhar(), desenho todos os objetos na tela e determino qual imagem a função deverá gerar para cada inimigo e para o portal em relação à variável "asa", que fica se somando a cada 0,430 segundos com a função asaMov(). Além disso, desenhar() determina a reposição dos inimigos após chegarem ao portal:<br>
+                <img src="codigo1.png"><br>
+                <img src="codigo2.png"><br>
+                A função da mira segue as coordenadas na posição do mouse e se a igualá a ela<br>
+                <img src="codigo3.png"><br>
+                Os inimigos se movem até chegar ao ponto do centro com uma certa velocidade, depois disso são reposicionados<br>
+                <img src="codigo4.png"><br>
+                Com a função tiro(), ao clicar com o botão esquerdo 'click' torna-se 'true' se as outra condições forem satisfeitas, o inimigo ou a vida são reposicionados e há a contagem de ponto para o caso dos inimigos:<br>
+                <img src="codigo5.png"><br>
+                E 'click' é determinado 'true' por este método:<br>
+                <img src="click.png"><br>
+                Com essas funções crio a intro inicial : <br>
+                <img src="codigo6.png"><br>
+                <img src="codigo7.png"><br>
+                Funções para as músicas:<br>
+                <img src="codigo8.png"><br>
+                Função principal que executa o jogo:<br>
+                <img src="codigo9.png"><br>
+                No momento em que as vidas acabam, a função end() é executada finalizando o jogo:<br>
+                <img src="codigo10.png"><br>
+                <img src="codigo11.png"><br>
+                Ao pressionar o botão 'START' todas essas funções são executadas. Porém para executa-lás em sequência, utilizei setTimeout() atrasando-as, assim cada função é executada de forma sequencial:<br>
+                <img src="codigo12.png"><br> 
+            </div> 
+        
+        </div>
+        
+ 
+
+</body>
+</html>
